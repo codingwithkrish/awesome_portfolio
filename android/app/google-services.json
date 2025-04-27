@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "116582584509",
+    "project_id": "krishportfoilio",
+    "storage_bucket": "krishportfoilio.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116582584509:android:e62482dc473351044b67d4",
+        "android_client_info": {
+          "package_name": "com.high.app.awesome_portfolio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXwKppr1HvL_AA2GOeEiH5Je5wnYpj0d0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

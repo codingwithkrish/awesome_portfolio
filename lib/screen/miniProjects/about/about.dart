@@ -41,6 +41,9 @@ class _AboutMeState extends State<AboutMe> {
                 ),
                 const Center(
                   child: CircleAvatar(
+                    child: Image(
+                      image: AssetImage("assets/images/me.jpg"),
+                    ),
                     radius: 50,
                   ),
                 ),
@@ -49,7 +52,7 @@ class _AboutMeState extends State<AboutMe> {
                   padding:
                       const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                   child: Text(
-                    "Hi, I am Deepak Mittal",
+                    "Hi, I am Krish Gupta",
                     style: GoogleFonts.openSans(
                         fontSize: 20, fontWeight: FontWeight.bold),
                   ),

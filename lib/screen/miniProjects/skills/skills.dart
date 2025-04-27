@@ -19,6 +19,11 @@ class Skills extends StatelessWidget {
                 Wrap(
                   alignment: WrapAlignment.center,
                   children: [
+                    Text(
+                      "Languages and Technologies:",
+                      style: GoogleFonts.inter(
+                          fontWeight: FontWeight.bold, fontSize: 25),
+                    ),
                     ...List.generate(
                       skills.length,
                       (index) => Container(
@@ -61,7 +66,7 @@ class Skills extends StatelessWidget {
                   height: 20,
                 ),
                 Text(
-                  "Languages",
+                  "Tools",
                   style: GoogleFonts.inter(
                       fontWeight: FontWeight.bold, fontSize: 25),
                 ),

@@ -101,25 +101,25 @@ List<AppModel> apps = [
       screen: const Skills()),
   AppModel(
     title: "Youtube",
-    assetPath: "assets/icons/youtube.svg",
+    icon: FontAwesomeIcons.youtube,
     color: Colors.white,
     link: youtubeChannel,
   ),
   AppModel(
     title: "LinkedIn",
-    assetPath: "assets/icons/linkedin.svg",
+    icon: FontAwesomeIcons.linkedin,
     color: Colors.white,
     link: linkedIn,
   ),
   AppModel(
     title: "Twitter/X",
-    assetPath: "assets/icons/twitter.svg",
+    icon: FontAwesomeIcons.twitter,
     color: Colors.white,
     link: twitter,
   ),
   AppModel(
-    title: "Topmate",
-    assetPath: "assets/icons/topMate.png",
+    title: "Instagram",
+    icon: FontAwesomeIcons.instagram,
     color: Colors.white,
     link: topMate,
   ),
@@ -136,13 +136,13 @@ List<AppModel> apps = [
   ),
   AppModel(
     title: "Github",
-    assetPath: "assets/icons/github.svg",
+    icon: FontAwesomeIcons.github,
     color: Colors.white,
     link: github,
   ),
   AppModel(
     title: "Play Store",
-    assetPath: "assets/icons/playstore.svg",
+    icon: FontAwesomeIcons.googlePlay,
     color: Colors.white,
     link: playApps,
   ),
@@ -151,24 +151,36 @@ List<AppModel> apps = [
 final List<JobExperience> education = [
   JobExperience(
     color: Colors.red,
-    location: "Patiala, India",
-    title: 'Computer Engineering',
-    company: 'Thapar Institure of Engineering',
+    location: "Pune,India",
+    title: 'B.Tech In Computer Engineering ',
+    company: 'Vishwakarma University Pune',
     startDate: 'June 2021',
-    endDate: 'Present',
+    endDate: 'Jun 2025',
     bulletPoints: [
+      "SGPA: 9.43/10, CGPA: 8.95/10",
       "Currently in the final year of my college!",
     ],
   ),
   JobExperience(
     color: Colors.blue,
-    location: "Patiala, India",
-    title: 'Diploma in Computer Science',
-    company: 'Thapar Polytechnic College',
-    startDate: 'June 2018',
+    location: "Korba Chhattisgarh, India",
+    title: '12th C.B.S.E Boards',
+    company: 'DAV PUBLIC SCHOOL Kusmunda ,Korba Chhattisgarh',
+    startDate: 'June 2020',
     endDate: 'June 2021',
     bulletPoints: [
-      'Some of the best years of college life',
+      "Percentage: 91.4%",
+    ],
+  ),
+  JobExperience(
+    color: Colors.blue,
+    location: "Korba Chhattisgarh, India",
+    title: '10th C.B.S.E Boards',
+    company: 'DAV PUBLIC SCHOOL Kusmunda ,Korba Chhattisgarh',
+    startDate: 'June 2018',
+    endDate: 'June 2019',
+    bulletPoints: [
+      "Percentage: 85.6%",
     ],
   ),
 ];
@@ -178,8 +190,8 @@ final List<JobExperience> jobExperiences = [
     color: Colors.blue,
     location: "Banglore, India",
     title: 'Full Stack Developer',
-    company: 'Stimuler',
-    startDate: 'Feb 2023',
+    company: 'Synkrama Technologies',
+    startDate: 'Aug 2024',
     endDate: 'Present',
     bulletPoints: [
       "Actively develop and manage push notifications to engage users effectively.",
@@ -246,21 +258,27 @@ final List<JobExperience> jobExperiences = [
   ),
 ];
 
-const String youtubeChannel = "https://www.youtube.com/@highcoder";
-const String linkedIn = "https://www.linkedin.com/in/high-coder/";
-const String github = "https://github.com/high-coder";
-const String twitter = "https://twitter.com/highcoder__";
-const String topMate = "https://topmate.io/highcoder";
+const String youtubeChannel = "";
+const String linkedIn = "";
+const String github = "";
+const String twitter = "";
+const String topMate = "";
 const String resumeLink =
     "https://drive.google.com/file/d/1LO3Km6fFkJVW92MNXRLSYl--E9YlTHJd/view";
-const String email = "deepakmittal941@gmail.com";
+const String email = "krishgupta.8.kg@gmail.com";
 String introduction =
-    "Welcome to my portfolio website, this website is highly inspired(almost copied) from Pawan Kumar.\n\nI am a Developer with 3 years of experience in flutter. Worked in many startups most recently worked with Stimuler an application that helps prepare students for Ielts and other english exams.\n\nWhen i am not developing I am mainly watching some movies or series or making stuff on Youtube or just watching fireship";
+    "Hello! I'm a passionate third-year B.Tech student at VU Pune, specializing in app development. Proficient in Java, Dart, Python, C, C++, and JavaScript, I have sharpened my skills through over five internships and numerous personal projects. \n\nAs an Android and Flutter Developer, I prioritize creating intuitive, user-friendly applications that meet client and end-user needs. With a robust programming foundation, I excel in collaborative teamwork, consistently delivering high-quality projects on time and within budget.\n\nEager to apply my tech expertise, confident in contributing to innovative organizations. Passionate about mobile/web development, data analysis, and software engineering. Excited to explore new opportunities and evolve as a developer.";
 const String playApps =
     "https://play.google.com/store/apps/developer?id=AppyMonk";
 
 List<SkillsModel> skills = [
   SkillsModel(skillName: "Flutter", colorS: Colors.blue, iconPath: "random"),
+  SkillsModel(skillName: "Dart", colorS: Colors.red, iconPath: "random"),
+  SkillsModel(
+      skillName: "Native Android Development",
+      colorS: Colors.pink,
+      iconPath: "random"),
+  SkillsModel(skillName: "Java", colorS: Colors.orange, iconPath: "random"),
   SkillsModel(
     skillName: "Firebase",
     colorS: Colors.yellow,
@@ -283,24 +301,75 @@ List<SkillsModel> skills = [
   ),
   SkillsModel(
     skillName: "CI/CD",
-    colorS: Colors.yellow,
-  ),
-  SkillsModel(
-    skillName: "Code Magic",
-    colorS: Colors.orange,
+    colorS: Colors.amberAccent,
   ),
   SkillsModel(
     skillName: "Firebase",
-    colorS: Colors.yellow,
+    colorS: Colors.accents[5],
   ),
   SkillsModel(
     skillName: "REST API",
+    colorS: Colors.lightGreenAccent,
+  ),
+  SkillsModel(
+    skillName: "NODE JS",
+    colorS: Colors.lightBlue,
+  ),
+  SkillsModel(
+    skillName: "JavaScript",
+    colorS: Colors.orange,
+  ),
+  SkillsModel(
+    skillName: "React",
+    colorS: Colors.amber,
+  ),
+  SkillsModel(
+    skillName: "Data Structure and Algorithm",
     colorS: Colors.yellow,
+  ),
+  SkillsModel(
+    skillName: "OOPS",
+    colorS: Colors.cyanAccent,
+  ),
+  SkillsModel(
+    skillName: "MySql",
+    colorS: Colors.redAccent,
+  ),
+  SkillsModel(
+    skillName: "Python",
+    colorS: Colors.limeAccent,
+  ),
+  SkillsModel(
+    skillName: "C",
+    colorS: Colors.teal,
+  ),
+  SkillsModel(
+    skillName: "C++",
+    colorS: Colors.accents[1],
+  ),
+  SkillsModel(
+    skillName: "HTML",
+    colorS: Colors.accents[0],
+  ),
+  SkillsModel(
+    skillName: "CSS",
+    colorS: Colors.cyan,
+  ),
+  SkillsModel(
+    skillName: "FastApi",
+    colorS: Colors.purpleAccent,
   ),
 ];
 
 List<SkillsModel> languages = [
-  SkillsModel(skillName: "Punjabi", colorS: Colors.orange),
-  SkillsModel(skillName: "Hindi", colorS: Colors.black),
-  SkillsModel(skillName: "English", colorS: Colors.blueGrey),
+  SkillsModel(skillName: "Android Studio", colorS: Colors.black),
+  SkillsModel(skillName: "Xcode", colorS: Colors.blueGrey),
+  SkillsModel(skillName: "Visual Studio", colorS: Colors.blueGrey),
+  SkillsModel(skillName: "Firebase", colorS: Colors.blueGrey),
+  SkillsModel(skillName: "Figma", colorS: Colors.blueGrey),
+  SkillsModel(skillName: "Adobe XD", colorS: Colors.blueGrey),
+  SkillsModel(skillName: "Git/GitHub", colorS: Colors.blueGrey),
+  SkillsModel(skillName: "GitLab", colorS: Colors.blueGrey),
+  SkillsModel(skillName: "Jira", colorS: Colors.blueGrey),
+  SkillsModel(skillName: "etc", colorS: Colors.blueGrey),
 ];

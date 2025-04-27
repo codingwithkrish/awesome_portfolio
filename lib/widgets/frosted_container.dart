@@ -19,7 +19,9 @@ class FrostedWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DecoratedBox(
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: Colors.black.withOpacity(0.3), width: 1)),
       child: Material(
         type: MaterialType.transparency,
         child: GestureDetector(
@@ -28,8 +30,8 @@ class FrostedWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             child: Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-              ),
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: Colors.black, width: 1)),
               child: Stack(
                 children: [
                   BackdropFilter(
@@ -58,7 +60,8 @@ class FrostedWidget extends StatelessWidget {
                           ],
                           stops: const [0.0, 1.0],
                         ),
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(color: Colors.black, width: 1)),
                     child: childW,
                   ),
                 ],

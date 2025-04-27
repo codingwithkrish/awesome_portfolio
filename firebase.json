@@ -1,0 +1,33 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "krishportfoilio",
+          "appId": "1:116582584509:android:e62482dc473351044b67d4",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "krishportfoilio",
+          "configurations": {
+            "android": "1:116582584509:android:e62482dc473351044b67d4",
+            "ios": "1:116582584509:ios:1f7ca4230dcf5e6f4b67d4",
+            "macos": "1:116582584509:ios:1f7ca4230dcf5e6f4b67d4",
+            "web": "1:116582584509:web:6e4789aafb6752f94b67d4",
+            "windows": "1:116582584509:web:bf1ad8becd06ff904b67d4"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

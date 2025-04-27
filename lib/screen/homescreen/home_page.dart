@@ -12,6 +12,7 @@ import 'package:provider/provider.dart';
 
 import '../../widgets/frosted_container.dart';
 import '../../widgets/rain_cloud.dart';
+import '../phone_screen/clock/clock_screen.dart';
 import 'phone_screen_wrapper.dart';
 
 class HomePage extends StatelessWidget {
@@ -27,7 +28,7 @@ class HomePage extends StatelessWidget {
     theme.widthRatio = theme.size.width / baseWidth;
     theme.heightRatio = theme.size.height / baseHeight;
     bool phone = false;
-    if (size.width < 800) {
+    if (size.width < 700) {
       phone = true;
     }
 
@@ -46,6 +47,21 @@ class HomePage extends StatelessWidget {
               ? const Rain(
                   oposite: false,
                   top: 300,
+                )
+              : Container(),
+          !phone
+              ? Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  child: FrostedWidget(
+                    height: 50,
+                    childW: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("Login"),
+                      ],
+                    ),
+                  ),
                 )
               : Container(),
           Selector<CurrentState, String>(
@@ -102,31 +118,28 @@ class HomePage extends StatelessWidget {
                                         ..setEntry(3, 2, 0.01)
                                         ..rotateY(-0.06),
                                       alignment: FractionalOffset.center,
-                                      child: Row(
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
                                         children: [
                                           Flexible(
-                                            child: Center(
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(10),
-                                                child: AutoSizeText(
-                                                  'HighCoder',
-                                                  style: GoogleFonts.exo(
-                                                      fontSize: 35,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                  maxFontSize: 35,
-                                                  minFontSize: 15,
-                                                  maxLines: 1,
-                                                ).animate().fadeIn(
-                                                    delay: .8.seconds,
-                                                    duration: .7.seconds),
-                                              ),
+                                              child: AutoSizeText(
+                                            "Coming Soon!",
+                                            style: GoogleFonts.exo(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w700,
+                                              fontSize: 28 *
+                                                  theme.widthRatio *
+                                                  theme.heightRatio,
                                             ),
-                                          ),
+                                            textAlign: TextAlign.center,
+                                            maxFontSize: 28,
+                                            minFontSize: 15,
+                                          )),
                                         ],
-                                      ),
+                                      ).animate().fadeIn(
+                                          delay: 1.seconds,
+                                          duration: .7.seconds),
                                     ),
                                   ),
                                   height: 395 * theme.heightRatio,
@@ -140,45 +153,18 @@ class HomePage extends StatelessWidget {
                                 ..rotateY(-0.07),
                               alignment: Alignment.topCenter,
                               child: FrostedWidget(
-                                onPressed: () {
-                                  currentState.launchInBrowser(topMate);
-                                },
+                                onPressed: () {},
                                 childW: Center(
                                   child: Container(
-                                    padding: const EdgeInsets.all(10),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Image.asset(
-                                          "assets/icons/topMate.png",
-                                          width: 50 *
-                                              theme.widthRatio *
-                                              theme.heightRatio,
-                                          height: 50 *
-                                              theme.widthRatio *
-                                              theme.heightRatio,
-                                        ),
-                                        SizedBox(
-                                          height: 10 * theme.heightRatio,
-                                        ),
-                                        Flexible(
-                                            child: AutoSizeText(
-                                          "Let's connect!",
-                                          style: GoogleFonts.exo(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w700,
-                                            fontSize: 28 *
-                                                theme.widthRatio *
-                                                theme.heightRatio,
-                                          ),
-                                          textAlign: TextAlign.center,
-                                          maxFontSize: 28,
-                                          minFontSize: 15,
-                                        )),
-                                      ],
-                                    ).animate().fadeIn(
-                                        delay: 1.seconds, duration: .7.seconds),
+                                    padding: EdgeInsets.all(
+                                        theme.size.width < 1000 ? 10 : 30),
+                                    child: Padding(
+                                            padding: EdgeInsets.all(20),
+                                            child: ClockScreen())
+                                        .animate()
+                                        .fadeIn(
+                                            delay: 1.seconds,
+                                            duration: .7.seconds),
                                   ),
                                 ),
                                 height: 175.5 * theme.heightRatio,
@@ -281,7 +267,7 @@ class HomePage extends StatelessWidget {
                                             MainAxisAlignment.center,
                                         children: [
                                           AutoSizeText(
-                                            '"Don\'t run after success run after perfection success will follow."',
+                                            'Coming Soon!',
                                             style: GoogleFonts.inter(
                                                 // fontSize: 30,
                                                 color: Colors.white,
@@ -290,20 +276,6 @@ class HomePage extends StatelessWidget {
                                             minFontSize: 10,
                                             maxLines: 3,
                                           ),
-                                          Align(
-                                              alignment: Alignment.bottomRight,
-                                              child: AutoSizeText(
-                                                '-Baba Ranchhoddas',
-                                                style: GoogleFonts.inter(
-                                                    // fontSize: 12,
-                                                    color: Colors.white
-                                                        .withOpacity(0.6),
-                                                    fontWeight:
-                                                        FontWeight.w400),
-                                                maxFontSize: 12,
-                                                minFontSize: 6,
-                                                maxLines: 1,
-                                              )),
                                         ],
                                       )),
                                     ),

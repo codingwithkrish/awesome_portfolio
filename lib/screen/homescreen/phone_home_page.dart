@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 
 import '../../consts/data.dart';
 import '../../providers/current_state.dart';
+import '../../providers/theme_provider.dart';
 
 class PhoneHomeScreen extends StatelessWidget {
   const PhoneHomeScreen({super.key});
@@ -14,8 +15,10 @@ class PhoneHomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     CurrentState currentState =
         Provider.of<CurrentState>(context, listen: false);
+    ThemeProvider themes = Provider.of<ThemeProvider>(context, listen: false);
     return Container(
-      padding: const EdgeInsets.only(top: 70, left: 20, right: 20),
+      padding: EdgeInsets.only(
+          top: themes.size.width < 700 ? 20 : 70, left: 20, right: 20),
       child: Column(
         children: [
           Wrap(
