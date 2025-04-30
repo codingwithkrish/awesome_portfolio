@@ -12,6 +12,7 @@ import 'infrastructure/utils/responsive.dart';
 
 void main() async {
   var initialRoute = await Routes.initialRoute;
+  log("object");
   Get.put(ApiController());
   log("object");
   runApp(Main(initialRoute));
@@ -30,7 +31,6 @@ class Main extends StatelessWidget {
       builder: (context,child) {
         Responsive.init(context); // Add this
         return GetMaterialApp(
-          debugShowCheckedModeBanner: false,
           initialRoute: initialRoute,
           getPages: Nav.routes,
         );
